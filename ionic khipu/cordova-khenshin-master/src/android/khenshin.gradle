@@ -1,0 +1,24 @@
+repositories{
+	jcenter()
+	maven {
+		url "https://maven.google.com"
+	}
+	maven {
+		url 'https://dev.khipu.com/nexus/content/repositories/browser2app'
+		credentials {
+			username khipuRepoUsername
+			password khipuRepoPassword
+		}
+	}
+}
+
+dependencies {
+	compile 'com.browser2app:khenshin:3.1.8'
+}
+
+android {
+	packagingOptions {
+		exclude 'META-INF/NOTICE'
+		exclude 'META-INF/LICENSE'
+	}
+}
